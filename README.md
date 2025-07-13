@@ -1,4 +1,4 @@
-# Computer Randomness: Are Compuiters Really Random?
+# Computer Randomness: Are Computers Really Random?
 
 ## Introduction
 
