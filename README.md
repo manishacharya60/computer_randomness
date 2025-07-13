@@ -4,8 +4,6 @@
 
 This project explores the fascinating world of random number generators (RNGs), from simple algorithms to complex systems that draw randomness from the real world. We implement and analyze several popular RNGs to understand their strengths, weaknesses, and ideal use cases. By the end of this exploration, you'll see that **not all randomness is created equal**!
 
----
-
 ## File Descriptions
 
 -   `lcg_generator.py`: Implements the **Linear Congruential Generator (LCG)**, a simple and fast PRNG.
@@ -14,8 +12,6 @@ This project explores the fascinating world of random number generators (RNGs), 
 -   `csprng_generator.py`: Implements a **Cryptographically Secure Pseudorandom Number Generator (CSPRNG)** using Python's `secrets` module.
 -   `diyrng_generator.py`: A **Do-It-Yourself True Random Number Generator (TRNG)** that sources entropy from microphone noise.
 -   `test/analyze_generators.py`: A script to perform **statistical analysis** on the implemented RNGs and generate visualizations.
-
----
 
 ## Installation & Running the Code
 
@@ -48,8 +44,6 @@ python test/analyze_generators.py
 
 This will print a statistical summary and generate visualizations in the `test/` folder.
 
----
-
 ## Statistical Analysis
 
 To understand how "random" these generators really are, we evaluate them using the following statistical metrics:
@@ -59,9 +53,7 @@ To understand how "random" these generators really are, we evaluate them using t
 -   **Chi-Square Test (p-value)**: High value (> 0.05) suggests uniformity.
 -   **Kolmogorov–Smirnov Test (p-value)**: Higher is better, measures full-distribution match.
 
----
-
-## 🧠 Summary Table
+## Summary Table
 
 | **Generator**             | **Mean** | **Variance** | **Chi-Square p-value** | **K-S Test p-value** | **Notes**                       |
 | ------------------------- | -------- | ------------ | ---------------------- | -------------------- | ------------------------------- |
@@ -72,9 +64,7 @@ To understand how "random" these generators really are, we evaluate them using t
 | **CSPRNG**                | 0.495870 | 0.084255     | 0.583243               | 0.194732             | Best for secure applications    |
 | **TRNG (Microphone)**     | 0.501197 | 0.084420     | 0.340698               | 0.548200             | Real-world entropy source       |
 
----
-
-## 💡 What This Means for Different Methods
+## What This Means for Different Methods
 
 -   **LCG (Good)**: Excellent statistical balance and efficiency. Ideal for fast simulations.
 -   **LCG (Poor)**: Passes tests but can have structural bias. Unsafe for sensitive applications.
@@ -83,9 +73,7 @@ To understand how "random" these generators really are, we evaluate them using t
 -   **CSPRNG**: Designed for unpredictability. Slightly off metrics are acceptable in this context.
 -   **TRNG**: Great entropy source. With filtering, can be a solid seed for other RNGs.
 
----
-
-## ✅ Conclusion
+## Conclusion
 
 This project demonstrates that randomness is not a one-size-fits-all concept. The "best" random number generator depends entirely on the application. For simple simulations, an LCG or XORShift might be sufficient. For more robust statistical applications, the Mersenne Twister is a solid choice. And for anything requiring security, only a CSPRNG or a well-designed TRNG will do.
 
